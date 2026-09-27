@@ -5,10 +5,13 @@
 
 int main(int argc,char *argv[])
 {
-    if(argc<2)
+    if(argc<3)
     {
-        printf("argument must  be greter than 2");
-        return 0;
+        printf("\n-------- SAMPLE INPUTS --------\n");
+            printf("\n./a.out -e source_file.bmp secret_file.txt [output_file.bmp]\n");
+            printf("./a.out -d source_file.bmp [output_file(.bmp .py .txt )]\n");
+            printf("\n");
+            return 0;
     }
     EncodeInfo encInfo;
     DecodeInfo decInfo;
@@ -43,6 +46,8 @@ OperationType check_operation_type(char opt)
         return e_encode;
     else if(opt == 'd')
         return e_decode;
-    else
+    else{
+    printf("ERROR : UNSUPPORTED");
         return e_unsupported;
+    }
 }
