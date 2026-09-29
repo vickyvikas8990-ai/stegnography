@@ -319,5 +319,5 @@ Status copy_remaining_img_data(FILE *fptr_src, FILE *fptr_dest)
             return e_failure;
     }
 
-    return e_success;
+    return e_success;//
 }
